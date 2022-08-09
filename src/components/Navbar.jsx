@@ -4,10 +4,10 @@ import { Transition } from "@headlessui/react";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <nav className="fixed w-full z-10 bg-white border-b-2 shadow-lg">
-        <div className="w-full">
-          <div className="flex items-center h-20 w-full ">
+    <header id="portofolio-navbar">
+      <nav className="fixed w-full z-10 bg-white border-b-2 shadow-lg h-auto ">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center h-auto m-4">
             {/* first block */}
             <div className="flex items-center mx-5 lg:mx-20 justify-between w-full ">
               <div className="flex justify-center items-center flex-shrink-0 ">
@@ -77,34 +77,35 @@ function Navbar() {
               </button>
             </div>
           </div>
-        </div>
-        <Transition
-          show={isOpen == true}
-          enter="transition ease-out duration-100 transform"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-75 transform"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          {(ref) => (
-            <div className="md:hidden id=mobile-menu">
-              <div ref={ref} className=" px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
-                  About
-                </button>
-                <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
-                  Experience
-                </button>
-                <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
-                  Project
-                </button>
+
+          <Transition
+            show={isOpen == true}
+            enter="transition ease-out duration-100 transform"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in duration-75 transform"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            {(ref) => (
+              <div className="md:hidden id=mobile-menu">
+                <div ref={ref} className=" px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                  <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
+                    About
+                  </button>
+                  <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
+                    Experience
+                  </button>
+                  <button className="cursor-pointer hover:bg-black text-black hover:text-white px-3 py-2 rounded-md text-base font-medium w-full flex justify-start">
+                    Project
+                  </button>
+                </div>
               </div>
-            </div>
-          )}
-        </Transition>
+            )}
+          </Transition>
+        </div>
       </nav>
-    </div>
+    </header>
   );
 }
 
