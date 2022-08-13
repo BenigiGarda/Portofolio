@@ -12,8 +12,7 @@ function Navbar() {
             <div className="flex items-center mx-5 lg:mx-20 justify-between w-full ">
               <div className="flex justify-center items-center flex-shrink-0 ">
                 <h1 className="font-bold text-xl cursor-pointer">
-                  Benigi <span className="text-red-500">Garda</span>
-                  <span className="text-green-500"> Anvadin</span>
+                  Benigi Garda Anvadin
                 </h1>
               </div>
             </div>

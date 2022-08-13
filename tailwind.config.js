@@ -6,7 +6,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cizel: "Cinzel",
+      },
+    },
   },
   variantOrder: [
     "responsive",
